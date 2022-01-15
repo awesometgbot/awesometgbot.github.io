@@ -1,14 +1,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>你好，GitHub</title>
+    <title>A Awesome Telegram Search Bot</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
   </head>
-  <body>
+  <body class="w3-theme">
     <h1>覺得厲害</h1>
     <div id="status"><h1></h1></div>
   </body>
@@ -23,9 +23,7 @@
         })
         .fail(function(data, textStatus, xhr){
           $( "#status>h1" ).html("Sorry, I am asleep");
-          console.log("error", data.status);
-          //This shows status message eg. Forbidden
-          console.log("STATUS: "+xhr);
+          
         });
   
         
