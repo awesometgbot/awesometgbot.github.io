@@ -16,14 +16,17 @@
   <script>
     $.get( "/cmFuZG9tX3dvcmRz.json", function( data ) {
       
-      var url=data[1][9]+data[8][9]+data[0][6]+data[0][4];
-      var jqxhr=$.get(url, function(){})
-        .done(function(){
+      var l=data[1][9]+data[8][9]+data[0][6]+data[0][4];
+      $.get(l, function(){
+        }).done(function(){
           $( "#status>h1" ).html("Hey, I am awake");
         })
-        .fail(function(){
+        .fail(function(data, textStatus, xhr){
           $( "#status>h1" ).html("Sorry, I am asleep");
-        })
+          console.log("error", data.status);
+          //This shows status message eg. Forbidden
+          console.log("STATUS: "+xhr);
+        });
   
         
         
