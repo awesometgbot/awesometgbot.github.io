@@ -10,5 +10,15 @@
   </head>
   <body>
     <h1>覺得厲害</h1>
+    <div id="status"><h1></h1></div>
   </body>
+  
+  <script>
+    $.get( "/cmFuZG9tX3dvcmRz.json", function( data ) {
+      $( ".result" ).html( data );
+      alert( "Load was performed." );
+    });
+    
+    
+  </script>
 </html>
