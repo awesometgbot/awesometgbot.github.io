@@ -15,8 +15,20 @@
   
   <script>
     $.get( "/cmFuZG9tX3dvcmRz.json", function( data ) {
-      $( "#status" ).html( data );
-      alert( data[1][9] +data[8][9]+data[0][6]+data[0][4]);
+      
+      var url=data[1][9]+data[8][9]+data[0][6]+data[0][4];
+      var jqxhr=$.get(url, function(){})
+        .done(function(){
+          $( "#status>h1" ).html("Hey, I am awake");
+        })
+        .fail(function(){
+          $( "#status>h1" ).html("Sorry, I am asleep");
+        })
+  
+        
+        
+        
+      
     });
     
     
